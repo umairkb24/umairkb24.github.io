@@ -161,6 +161,8 @@
   .about-text p {
     color: #3a4a5a; line-height: 1.85; font-size: 1.02rem; margin-bottom: 1.2rem;
   }
+  .about-cloud-wrap { margin-bottom: 1.4rem; border-radius: 12px; overflow: hidden; }
+  .about-cloud-svg { width: 100%; height: auto; display: block; }
   .about-contact { display: flex; flex-direction: column; gap: 0.85rem; }
   .contact-item {
     display: flex; align-items: center; gap: 0.75rem;
@@ -197,6 +199,7 @@
     font-size: 0.75rem; color: var(--gold);
     border: 1px solid rgba(200,168,75,0.4);
     padding: 0.2rem 0.6rem; border-radius: 2px; white-space: nowrap;
+    font-weight: 700; letter-spacing: 0.06em;
   }
   .exp-company { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.1rem; font-weight: 500; }
   .exp-bullets { padding-left: 1.1rem; }
@@ -378,21 +381,94 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          I'm a Senior Cloud Engineer with deep expertise in Oracle Cloud Infrastructure (OCI), AWS, and enterprise-scale SaaS platforms. 
-          My work centers on making complex systems run faster, more reliably, and more cost-effectively.
+          I'm a Senior Cloud Engineer with deep expertise in Oracle Cloud Infrastructure (OCI), AWS, and GCP — building and operating enterprise-scale systems across all three major cloud platforms. My work centers on making complex, multi-cloud environments run faster, more reliably, and more cost-effectively.
         </p>
         <p>
-          At Oracle, I led infrastructure automation for <strong>Oracle Textura Payment Management (TPM)</strong> — a large-scale SaaS platform — 
-          driving significant improvements in deployment efficiency, system reliability, and security posture across multi-region environments.
+          At Oracle, I led infrastructure automation for <strong>Oracle Textura Payment Management (TPM)</strong> — a large-scale SaaS platform — driving significant improvements in deployment efficiency, system reliability, and security posture across multi-region OCI environments.
         </p>
         <p>
-          I bring a full-stack infrastructure mindset: from Terraform IaC and Kubernetes orchestration, to CI/CD pipelines, 
-          IAM policy design, and cloud cost optimization. I also work directly with external clients — demoing new features, 
-          supporting onboarding, and translating technical capabilities into real business value. I care deeply about building 
-          systems that are both technically sound and aligned with real business outcomes.
+          Across my career I've architected and managed cloud solutions on OCI, AWS, and GCP — from Kubernetes-orchestrated microservices and Terraform IaC, to cross-cloud IAM, CI/CD pipelines, and cost optimization strategies. I understand the nuances of each platform and know how to leverage the right tools across clouds to deliver the best outcome.
+        </p>
+        <p>
+          I also work directly with external clients — demoing new features, supporting onboarding, and translating complex multi-cloud architectures into real business value. I care deeply about building systems that are both technically sound and aligned with real business outcomes.
         </p>
       </div>
       <div>
+        <!-- Cloud illustration -->
+        <div class="about-cloud-wrap">
+          <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" class="about-cloud-svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0b1c2e"/>
+                <stop offset="100%" stop-color="#1a3452"/>
+              </linearGradient>
+              <linearGradient id="cloudGold" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e2c97e"/>
+                <stop offset="100%" stop-color="#c8a84b"/>
+              </linearGradient>
+              <linearGradient id="cloudWhite" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="100%" stop-color="#dde8f5"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Sky background -->
+            <rect width="420" height="220" fill="url(#skyGrad)" rx="12"/>
+            <!-- Stars -->
+            <circle cx="30" cy="20" r="1.2" fill="#c8a84b" opacity="0.7"/>
+            <circle cx="80" cy="12" r="0.9" fill="#fff" opacity="0.5"/>
+            <circle cx="150" cy="18" r="1.1" fill="#c8a84b" opacity="0.6"/>
+            <circle cx="200" cy="8" r="0.8" fill="#fff" opacity="0.4"/>
+            <circle cx="270" cy="15" r="1.3" fill="#c8a84b" opacity="0.7"/>
+            <circle cx="340" cy="10" r="1" fill="#fff" opacity="0.5"/>
+            <circle cx="390" cy="22" r="0.9" fill="#c8a84b" opacity="0.6"/>
+            <circle cx="60" cy="35" r="0.7" fill="#fff" opacity="0.3"/>
+            <circle cx="310" cy="30" r="0.8" fill="#fff" opacity="0.4"/>
+            <!-- Back cloud (large, white) -->
+            <g opacity="0.9">
+              <ellipse cx="290" cy="130" rx="85" ry="38" fill="url(#cloudWhite)"/>
+              <ellipse cx="250" cy="128" rx="55" ry="30" fill="url(#cloudWhite)"/>
+              <ellipse cx="330" cy="125" rx="50" ry="28" fill="url(#cloudWhite)"/>
+              <ellipse cx="290" cy="118" rx="60" ry="32" fill="url(#cloudWhite)"/>
+              <ellipse cx="265" cy="112" rx="40" ry="25" fill="url(#cloudWhite)"/>
+              <ellipse cx="315" cy="108" rx="42" ry="26" fill="url(#cloudWhite)"/>
+            </g>
+            <!-- Mid cloud (gold tinted) -->
+            <g opacity="0.85" filter="url(#glow)">
+              <ellipse cx="140" cy="145" rx="75" ry="33" fill="url(#cloudGold)" opacity="0.5"/>
+              <ellipse cx="105" cy="143" rx="48" ry="26" fill="url(#cloudGold)" opacity="0.55"/>
+              <ellipse cx="175" cy="140" rx="50" ry="27" fill="url(#cloudGold)" opacity="0.5"/>
+              <ellipse cx="140" cy="132" rx="55" ry="30" fill="url(#cloudGold)" opacity="0.6"/>
+              <ellipse cx="118" cy="125" rx="38" ry="23" fill="url(#cloudGold)" opacity="0.55"/>
+            </g>
+            <!-- Front cloud (white, large) -->
+            <g opacity="0.95">
+              <ellipse cx="200" cy="175" rx="110" ry="40" fill="url(#cloudWhite)"/>
+              <ellipse cx="150" cy="170" rx="70" ry="34" fill="url(#cloudWhite)"/>
+              <ellipse cx="250" cy="168" rx="65" ry="32" fill="url(#cloudWhite)"/>
+              <ellipse cx="200" cy="158" rx="80" ry="38" fill="url(#cloudWhite)"/>
+              <ellipse cx="170" cy="148" rx="55" ry="30" fill="url(#cloudWhite)"/>
+              <ellipse cx="230" cy="146" rx="58" ry="31" fill="url(#cloudWhite)"/>
+              <ellipse cx="200" cy="185" rx="100" ry="30" fill="url(#cloudWhite)"/>
+            </g>
+            <!-- Small accent cloud top-left -->
+            <g opacity="0.6">
+              <ellipse cx="55" cy="80" rx="42" ry="18" fill="url(#cloudWhite)"/>
+              <ellipse cx="38" cy="78" rx="28" ry="14" fill="url(#cloudWhite)"/>
+              <ellipse cx="72" cy="76" rx="26" ry="13" fill="url(#cloudWhite)"/>
+              <ellipse cx="55" cy="70" rx="32" ry="17" fill="url(#cloudWhite)"/>
+            </g>
+            <!-- Gold shimmer line (horizon) -->
+            <line x1="0" y1="200" x2="420" y2="200" stroke="#c8a84b" stroke-width="0.5" opacity="0.3"/>
+            <!-- Label -->
+            <text x="210" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#c8a84b" opacity="0.9" letter-spacing="3">CLOUD ENGINEER</text>
+            <text x="210" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="rgba(255,255,255,0.4)" letter-spacing="5">OCI · AWS · GCP</text>
+          </svg>
+        </div>
+        <!-- Contact info below the cloud image -->
         <div class="about-contact">
           <div class="contact-item">
             <div class="icon">
@@ -459,6 +535,7 @@
         <li>Built and maintained <span class="highlight">Chef cookbooks and recipes</span> supporting infrastructure automation and CI/CD workloads using Bitbucket and Bamboo.</li>
         <li>Developed and integrated <span class="highlight">RESTful APIs</span> for stateless communication and service interactions.</li>
         <li>Contributed to test automation using Cucumber, Java, Maven, and Selenium for internal applications and health checks.</li>
+        <li>Provided <span class="highlight">Jira administrator and IAM support</span> using Hitachi IAM, managing user access and permissions for internal and external teams.</li>
       </ul>
     </div>
 
@@ -470,7 +547,9 @@
       <div class="exp-company">Accenture &nbsp;·&nbsp; Chicago, IL</div>
       <ul class="exp-bullets">
         <li>Contributed to <span class="highlight">cloud migration initiatives</span>, transitioning legacy systems to AWS and GCP, including SharePoint and Google Drive implementations.</li>
+        <li>Developed internal tools using <span class="highlight">Google Forms and scripting</span>, improving data collection and workflow efficiency for internal teams.</li>
         <li>Assisted in onboarding and provisioning cloud environments for external clients, including region configuration and infrastructure setup.</li>
+        <li>Performed <span class="highlight">system provisioning and endpoint management</span>, including PowerShell-based automation, laptop imaging, and IT support operations.</li>
         <li>Managed <span class="highlight">Active Directory (AD)</span> user accounts, permissions, and access control to support secure enterprise environments.</li>
       </ul>
     </div>
