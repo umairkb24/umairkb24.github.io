@@ -129,6 +129,7 @@
   .stat-label {
     font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
     color: rgba(255,255,255,0.45); margin-top: 0.3rem;
+    font-weight: 700;
   }
 
   @keyframes fadeUp {
@@ -327,7 +328,8 @@
     .hero h1 { font-size: 2.2rem; }
     .hero-title { font-size: 0.9rem; }
     .hero-desc { font-size: 0.95rem; text-align: left; }
-    .hero-stats { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem 1rem; justify-content: center; }
+    .stat { text-align: center; }
     .stat-num { font-size: 1.6rem; }
     .stat-label { font-size: 0.7rem; }
 
